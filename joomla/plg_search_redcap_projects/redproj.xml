@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search" method="upgrade">
+	<name>Search - Redcap Project</name>
+	<author>Chok Yip</author>
+	<creationDate>November 2021</creationDate>
+	<copyright>Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorUrl>https://github.com/cmyip/joomla_redcap_plugin</authorUrl>
+	<version>0.8.8</version>
+	<description>Search redcap projects from joomla</description>
+	<files>
+		<filename plugin="redproj">redproj.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_search_redproj.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="target_url"
+					type="string"
+					label="PLG_SEARCH_REDCAP_TARGET_URL"
+					description="PLG_SEARCH_REDCAP_FIELD_SEARCHLIMIT_DESC"
+					default="https://google.com/api/redcap"
+					filter="string"
+					size="150"
+				/>
+
+				<field
+						name="api_username"
+						type="string"
+						label="PLG_SEARCH_REDCAP_SUPER_USERNAME"
+						description="PLG_SEARCH_REDCAP_SUPER_USERNAME_DESC"
+						default="site_admin"
+						filter="string"
+						size="66"
+				/>
+
+				<field
+						name="api_key"
+						type="string"
+						label="PLG_SEARCH_REDCAP_SUPER_API_KEY"
+						description="PLG_SEARCH_REDCAP_SUPER_API_KEY_DESC"
+						default="f0asd0casdf"
+						filter="string"
+						size="66"
+				/>
+
+				<field
+						name="project_baseurl"
+						type="string"
+						label="PLG_SEARCH_REDCAP_BASEURL_LABEL"
+						description="PLG_SEARCH_REDCAP_BASEURL_DESC"
+						default="http://localhost:8383/redcap_v11.2.6/ProjectSetup/index.php?pid=%s"
+						filter="string"
+						size="66"
+				/>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

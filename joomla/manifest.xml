@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade" client="site">
+    <name>com_redcap</name>
+    <author>Chok Yip</author>
+    <authorEmail>kueyteowmee@rmagroup.com.my</authorEmail>
+    <creationDate>10/19/2021</creationDate>
+	<copyright>Copyright (C) 2021</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>0.8</version>
+    <description>Redcap project search integration</description>
+    <requiresMoodleVersion>2018120300</requiresMoodleVersion>
+
+	<scriptfile>install.php</scriptfile>
+    
+    <languages>
+	
+    <plugins>
+    <plugin folder="plg_search_redcap_projects" plugin="redproj" order="-100" group="search">
+        <files folder="plg_search_redcap_projects">
+            <file>redproj.php</file>
+            <file>redproj.xml</file>
+        </files>
+        <languages folder="plg_search_redcap_projects/language">
+            <language tag="en-GB">en-GB.plg_search_redproj.ini</language>
+        </languages>
+    </plugin>
+</plugins>  
+
+</extension>
